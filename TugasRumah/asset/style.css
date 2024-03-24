@@ -1,0 +1,177 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: rgb(102, 126, 126);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}
+/* Media query untuk mode tablet (misalnya lebar layar maksimal 768px) */
+@media (max-width: 768px) {
+  .sidebar {
+      display: flex;
+      justify-content: center; /* Mengatur posisi horizontal ke tengah */
+      align-items: center; /* Mengatur posisi vertikal ke tengah */
+      position: relative; /* Mengatur posisi relatif agar dapat digeser */
+      top: 0; /* Menggeser sidebar ke atas (sesuaikan dengan kebutuhan) */
+  }
+  
+  .sidebar a {
+      padding: 10px; /* Mengatur jarak antara item dalam sidebar */
+  }
+}
+
+.sidebar {
+  
+  text-align: center;
+  display: block;
+  background-color: #333;
+  color: #fff;
+  padding: 50px;
+  width: 80px;
+  height: 150%; 
+  
+  /* Adjusted height */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  font-family: sans-serif;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 10px;
+}
+
+.content {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero {
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  
+}
+
+.hero img {
+  width: 40%;
+ float: right;
+ align-items: inherit;
+}
+
+.hero-content {
+  width: 50%;
+  font-size: large;
+  align-items: inherit;
+}
+
+.action-btn {
+  display: inline-block;
+  background-color: #f00;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+.instagram-link {
+  display: flex; /* Menggunakan flexbox */
+  align-items: center; /* Menyamakan vertikal */
+  color: white; /* Warna teks putih */
+  text-decoration: none; /* Hilangkan garis bawah */
+}
+
+.instagram-link:visited {
+  color: white; /* Warna tetap putih setelah dikunjungi */
+}
+
+.instagram-link:hover {
+  color: lightgray; /* Warna teks berubah menjadi abu-abu ketika diarahkan */
+}
+
+.instagram-link:active {
+  color: #888; /* Warna teks berubah menjadi abu-abu ketika diklik */
+}
+
+
+.footer {
+  grid-column: 1 / 3;
+  grid-row: 3;
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+}
+
+.footer ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.footer ul li {
+  display: flex;
+  align-items: center;
+}
+
+.footer ul li img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .container {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto 1fr;
+  }
+
+  .sidebar {
+      grid-row: 1;
+      grid-column: 1;
+      width: 100%; /* Menyesuaikan lebar sidebar dengan lebar layar */
+      height: auto; /* Menyesuaikan tinggi sidebar dengan konten */
+  }
+
+  .content {
+      grid-column: 1;
+      grid-row: 2;
+  }
+
+  .footer {
+      grid-column: 1;
+      grid-row: 3;
+  }
+
+  .sidebar ul {
+      display: flex;
+      justify-content: space-around;
+      padding: 10px;
+      margin: 0;
+  }
+
+  .sidebar ul li {
+      margin: 0;
+  }
+
+  .sidebar a {
+      display: block;
+      padding: 10px;
+      color: #fff;
+      text-decoration: none;
+  }
+}
